@@ -31,16 +31,38 @@ const connections = [
 			},
 		],
 	},
-	// ← Add more puzzles here, e.g.:
-	// {
-	//   creator: 'Sarah',
-	//   groups: [
-	//     { label: '...', color: 'yellow', words: ['WORD1', 'WORD2', 'WORD3', 'WORD4'] },
-	//     { label: '...', color: 'green',  words: ['WORD5', 'WORD6', 'WORD7', 'WORD8'] },
-	//     { label: '...', color: 'blue',   words: ['WORD9', 'WORD10', 'WORD11', 'WORD12'] },
-	//     { label: '...', color: 'purple', words: ['WORD13', 'WORD14', 'WORD15', 'WORD16'] },
-	//   ],
-	// },
+	{
+		creator: "Fei",
+		message:
+			"happy birthday april!! here's a fun list of things to do for unemployment HAHA enjoy your time off to rest, heal and more importantly still try to have fun!! i'm cheering you on and hope that this turning point will bring you a lot more joy in the future 💗 know that you are well loved and we're all here for you whenever you need",
+		groups: [
+			{
+				label: "Things to Finally Declutter",
+				color: "blue",
+				words: ["CAMERA ROLL", "DOWNLOADS FOLDER", "TEXTS", "EMAILS"],
+			},
+			{
+				label: "Things to Finally Organise",
+				color: "green",
+				words: [
+					"MAPS SAVED PLACES",
+					"SPOTIFY PLAYLISTS",
+					"SAVED TIKTOKS",
+					"NOTES APP",
+				],
+			},
+			{
+				label: "Games to Keep the Brain Cells Alive (barely)",
+				color: "yellow",
+				words: ["WORDLE", "CONNECTIONS", "WIKI GAME", "CRYPTIC CROSSWORD"],
+			},
+			{
+				label: "Brain Rot Content Rabbit Holes",
+				color: "purple",
+				words: ["JUBILEE VIDEOS", "IG REELS", "HIKING STREAMS", "SETS"],
+			},
+		],
+	},
 ];
 
 export default connections;
