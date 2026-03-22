@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #ffffff;
+  color: #121212;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  text-align: left;
+}
+
+.nyt-header-font {
+  font-family: 'UnifrakturMaguntia', Georgia, serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
