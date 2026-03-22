@@ -12,7 +12,14 @@ const cryptic = [
 		explanation:
 			"BAG (bags endlessly = BAGS without its last letter) holding E (energy) + L (love) + S = BAGELS — and bagels are rolls!",
 	},
-	// ← Add more puzzles here
+	{
+		creator: "Nelson",
+		message: "",
+		clue: "Sent me to space at your party : I MAKE TEN MIXED (8)",
+		answer: "KETAMINE",
+		length: 8,
+		explanation: "horse time",
+	},
 ];
 
 export default cryptic;
