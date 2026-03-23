@@ -14,7 +14,8 @@ const cryptic = [
 	},
 	{
 		creator: "Nelson",
-		message: "",
+		message:
+			"HAPPPY BIRTHDAYYY APRIL ❤️!! So grateful and happy to be your friend in the past year and be part of your life! So excited to skank out with you at more gigs this year! (and have you play at my next rave 😉) Hope you have an amazing BDAY! Here is to another year of drinking GUINESS, buying festival tickets, watching gigs and living LIFE!!",
 		clue: "Sent me to space at your party : I MAKE TEN MIXED (8)",
 		answer: "KETAMINE",
 		length: 8,
