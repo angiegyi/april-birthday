@@ -5,7 +5,6 @@ import WinMessage from '../components/WinMessage'
 import puzzles from '../data/wordle'
 
 const MAX_GUESSES = 6
-const WORD_LENGTH = 5
 const KEYBOARD_ROWS = [
   ['Q','W','E','R','T','Y','U','I','O','P'],
   ['A','S','D','F','G','H','J','K','L'],
@@ -21,8 +20,15 @@ function getTileState(guess, index, answer) {
   return 'absent'
 }
 
-function getTileClass(state, revealed) {
-  const base = 'w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-xl font-bold border-2 uppercase transition-all duration-300 select-none'
+function getTileSize(wordLength) {
+  if (wordLength <= 5) return 'w-12 h-12 sm:w-14 sm:h-14 text-xl'
+  if (wordLength <= 7) return 'w-10 h-10 sm:w-12 sm:h-12 text-lg'
+  return 'w-8 h-8 sm:w-10 sm:h-10 text-base'
+}
+
+function getTileClass(state, revealed, wordLength) {
+  const size = getTileSize(wordLength)
+  const base = `${size} flex items-center justify-center font-bold border-2 uppercase transition-all duration-300 select-none`
   if (!revealed) {
     if (state === 'empty') return `${base} border-gray-300 text-black`
     return `${base} border-gray-600 text-black`
@@ -81,6 +87,7 @@ export default function WordleGame() {
   }
 
   const ANSWER = puzzle.answer
+  const WORD_LENGTH = ANSWER.length
 
   const showMessage = (msg, duration = 2000) => {
     setMessage(msg)
@@ -136,7 +143,7 @@ export default function WordleGame() {
         <div className="text-center mb-6">
           <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
           <h2 className="text-3xl font-bold text-black mb-2">Wordle</h2>
-          <p className="text-sm text-gray-600">Guess the 5-letter word in 6 tries.</p>
+          <p className="text-sm text-gray-600">Guess the {WORD_LENGTH}-letter word in 6 tries.</p>
           <div className="text-xs text-gray-400 mt-1 space-x-4">
             <span className="inline-flex items-center gap-1"><span className="w-3 h-3 bg-green-600 inline-block rounded-sm"></span> Correct</span>
             <span className="inline-flex items-center gap-1"><span className="w-3 h-3 bg-yellow-500 inline-block rounded-sm"></span> Wrong spot</span>
@@ -162,7 +169,7 @@ export default function WordleGame() {
                   return (
                     <div
                       key={colIdx}
-                      className={getTileClass(state, isRevealed && rowIdx < guesses.length)}
+                      className={getTileClass(state, isRevealed && rowIdx < guesses.length, WORD_LENGTH)}
                       style={isRevealed && rowIdx < guesses.length ? { transitionDelay: `${colIdx * 200}ms` } : {}}
                     >
                       {letter}

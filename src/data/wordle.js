@@ -1,20 +1,18 @@
 // ─── WORDLE PUZZLES ───────────────────────────────────────────────────────────
 // Each puzzle: { creator, answer, hint }
-// answer must be exactly 5 letters, all caps.
+// answer must be all caps. Any length is supported.
 
 const wordle = [
+	{
+		creator: "Lucy",
+		answer: "KIMCHI",
+		message: `Happy Birthday April 🥳🥳 I hope you are getting everything you need overseas. Can’t wait to celebrate with you when you are back ❤️`,
+	},
   {
-    creator: 'Your Friends',
-    answer: 'APRIL', // ← CHANGE THIS
-    hint: 'Think about whose birthday it is today!',
-    message: 'Happy Birthday April! 🎉', // ← CHANGE THIS
+    creator: 'Izzy',
+    answer: 'JELLYCAT',
+    message: 'Happy Birthday April! 🎉',
   },
-  // ← Add more puzzles here, e.g.:
-  // {
-  //   creator: 'Sarah',
-  //   answer: 'SMILE',
-  //   hint: 'What April does every day',
-  // },
-]
+];
 
-export default wordle
+export default wordle;

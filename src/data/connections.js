@@ -63,6 +63,65 @@ const connections = [
 			},
 		],
 	},
+	{
+		creator: "Eric",
+		message:
+			"Happiest of birthdays slaypril!!!! Wish I was there in Thailand celebrating with you, but it's okay we can have a big party once you're back. Hope you get all the rest and recovery you need so you can also rampage Thailand 🙌",
+		groups: [
+			{
+				label: "Things that gave us trauma",
+				color: "blue",
+				words: ["JLOVE", "SAPPORO SNOW FESTIVAL", "COD CUM", "HOSTEL"],
+			},
+			{
+				label: "Best things I've eaten with April",
+				color: "green",
+				words: [
+					"POLE TOWN FRUIT JUICE",
+					"SAPPORO BLACK BEER",
+					"DAIFUKU",
+					"NISEKO EGG TARTS",
+				],
+			},
+			{
+				label: "Things that remind me of April",
+				color: "yellow",
+				words: ["HILARIOUS", "RIP BACK", "SELFLESS", "NOT THAT DEEP"],
+			},
+			{
+				label: "Things April dropped in Japan",
+				color: "purple",
+				words: ["PHONE", "FACE MASK", "TISSUE", "CICAPLAST"],
+			},
+		],
+	},
+	{
+		creator: "Reya",
+		message:
+			"Happiest of birthdays slaypril!!!! Wish I was there in Thailand celebrating with you, but it's okay we can have a big party once you're back. Hope you get all the rest and recovery you need so you can also rampage Thailand 🙌",
+		groups: [
+			{
+				label: "Girlypops",
+				color: "blue",
+				words: ["Tate", "Madison", "Addison", "ARY"],
+			},
+			{
+				label: "Soul",
+				color: "green",
+				words: ["Piano", "Cat", "Blob", "Dead"],
+			},
+			{
+				label: "YorkSt",
+				color: "yellow",
+				words: ["Quiz", "ADHD", "Yap", "Mother"],
+			},
+			{
+				label: "Piano",
+				color: "purple",
+				words: ["Panda", "Fingers", "Angie", "Golden"],
+			},
+		],
+	},
 ];
 
 export default connections;
