@@ -186,6 +186,33 @@ const connections = [
 			},
 		],
 	},
+	{
+		creator: "Aditi",
+		message:
+			"Happy Birthday April! Can't believe it's been 8 years since we both decided to volunteer at that IT conference (best decision ever). From our uni era to Sydney era, I'm so grateful to have you in my life. You're the kindest, most caring person I know. Can't wait to have you back soon, telling me what I can and can't eat. 💚",
+		groups: [
+			{
+				label: "Euro summer",
+				color: "yellow",
+				words: ["Tomorrowland", "Churros", "Ibiza", "Old town"],
+			},
+			{
+				label: "Green people",
+				color: "green",
+				words: ["Meow", "Bananagram", "Camel up", "You can't eat that"],
+			},
+			{
+				label: "Our origin story",
+				color: "blue",
+				words: ["24/7 pancake parlour", "MAC", "YOW!", "IT ball"],
+			},
+			{
+				label: "The Sydney chapter",
+				color: "purple",
+				words: ["Paul st", "Gas leak", "APM cruise", "Jellycat"],
+			},
+		],
+	},
 ];
 
 export default connections;
