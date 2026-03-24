@@ -27,7 +27,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
                 <div>
                   <p className="text-lg font-bold">{puzzle.creator}</p>
                   <p className="text-sm text-gray-500 group-hover:text-gray-300">
-                    {title} puzzle
+                    {puzzle.isMultiPart ? `Multi-part ${title} puzzle (${puzzle.parts?.length} parts)` : `${title} puzzle`}
                   </p>
                 </div>
               </div>

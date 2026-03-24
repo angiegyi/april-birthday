@@ -24,16 +24,22 @@ const cryptic = [
 	{
 		creator: "Marcus",
 		message: "",
-		clue: "Great explorers observe first, then plot. Why study old maps? (9)",
-		answer: "GEOGRAPHY",
-		length: 9,
-	},
-	{
-		creator: "Marcus",
-		message: "",
-		clue: "Face card? A buried antique, been beheaded. (5)",
-		answer: "QUEEN",
-		length: 5,
+		isMultiPart: true,
+		parts: [
+			{
+				clue: "Great explorers observe first, then plot. Why study old maps? (9)",
+				answer: "GEOGRAPHY",
+				length: 9,
+				explanation: "Great explorers = definition; observe first (O) + then plot (anagram of 'then plot' minus 'then' = GEOGRAPHY)",
+			},
+			{
+				clue: "Face card? A buried antique, been beheaded. (5)",
+				answer: "QUEEN",
+				length: 5,
+				explanation: "Face card = definition; antique beheaded (ANTIQUEEN without first letter) = QUEEN",
+			},
+		],
+		megaAnswer: "GEOGRAPHY QUEEN",
 	},
 	{
 		creator: "Deepthi",
