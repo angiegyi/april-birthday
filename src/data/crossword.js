@@ -1,31 +1,37 @@
 // ─── CROSSWORD PUZZLES ────────────────────────────────────────────────────────
-// Each puzzle: { creator, answerGrid, cluesAcross, cluesDown }
-// answerGrid: 5x5 array, '#' for black squares, uppercase letter for answers.
-// Clues: { number, clue, row, col }
+// Each puzzle: { creator, message, url }
+// url: external link to the crossword puzzle
 
 const crossword = [
-  {
-    creator: 'Your Friends',
-    message: 'Happy Birthday April! 🎉', // ← CHANGE THIS
-    answerGrid: [
-      ['C', 'A', 'K', 'E', 'S'],
-      ['A', '#', 'I', '#', 'U'],
-      ['N', 'I', 'N', 'E', 'N'],
-      ['D', '#', 'D', '#', 'N'],
-      ['Y', 'E', 'A', 'R', 'Y'],
-    ],
-    cluesAcross: [
-      { number: 1, clue: 'Birthday dessert (5)', row: 0, col: 0 },
-      { number: 5, clue: 'How many lives a cat has (4)', row: 2, col: 0 },
-      { number: 6, clue: '"Happy ___ to you" (4)', row: 4, col: 0 },
-    ],
-    cluesDown: [
-      { number: 1, clue: 'Sweet treat on a stick', row: 0, col: 0 },
-      { number: 2, clue: 'Birthday ___ (song)', row: 0, col: 2 },
-      { number: 3, clue: 'How old? Another ___ older!', row: 0, col: 4 },
-    ],
-  },
-  // ← Add more puzzles here
-]
+	{
+		creator: "Mish",
+		message:
+			"Dear April, I lava you so much and am forever grateful to have you in my life! Thanks for all the sillies, yaps, and acousticness over the years Love Mish <3 <3 <3",
+		url: "https://crosswordlabs.com/view/happy-bday-april-love-mish",
+	},
+	{
+		creator: "Rhea",
+		message:
+			"Happy 30th birthday April!!! I love you so much 🤍 You mean so much to me and I'm so proud of everything you're doing for yourself. I still can't believe we met at university and have stayed so close, even living in different countries. I really appreciate you and all the support you've always given me. I hope you're having the best birthday because you truly deserve it. Can't wait to celebrate you soon in LA",
+		url: "https://crosswordlabs.com/view/happy-birthday-april-love-you-rhea",
+	},
+	{
+		creator: "Nicci",
+		message:
+			"Happy birthday April!! Hope you have an amazing year ahead! Very grateful for you ❤️ Can't wait to see you when you're back! Sending lots of love",
+		url: "https://drive.google.com/file/d/1CtOXtpLQzYs89kLbb3TTyAUGhfGNbfTp/view?usp=sharing",
+	},
+	{
+		creator: "Nicola",
+		message:
+			"Happy 30th queen! Wishing you health and peace ❤️ can't wait to see you irl when you are back!!",
+		url: "https://crosswordlabs.com/view/happy-bday-april-love-nic",
+	},
+	{
+		creator: "Ben",
+		message: "Happy birthday april!!",
+		url: "https://crosswordlabs.com/view/april-bday-ben",
+	},
+];
 
-export default crossword
+export default crossword;

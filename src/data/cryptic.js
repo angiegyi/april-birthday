@@ -24,16 +24,16 @@ const cryptic = [
 	{
 		creator: "Marcus",
 		message: "",
-		clue: "Face card? A buried antique, been beheaded. (5)",
-		answer: "GEOGRAPHY QUEEN",
-		length: 5,
+		clue: "Great explorers observe first, then plot. Why study old maps? (9)",
+		answer: "GEOGRAPHY",
+		length: 9,
 	},
 	{
 		creator: "Marcus",
 		message: "",
-		clue: "Great explorers observe first, then plot. Why study old maps? (9)",
-		answer: "GEOGRAPHY QUEEN",
-		length: 9,
+		clue: "Face card? A buried antique, been beheaded. (5)",
+		answer: "QUEEN",
+		length: 5,
 	},
 	{
 		creator: "Deepthi",
