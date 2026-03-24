@@ -29,6 +29,11 @@ const wordle = [
 		message: `Happy birthday April you absolute legend ❤️ Sad we're not there to see you but can't wait to see you and celebrate properly when we next see you. Maybe come visit? So much love.`,
 	},
 	{
+		creator: "Mike",
+		url: "https://mywordle.strivemath.com/?word=xzrfvjnwudj",
+		message: `Happy birthday April!! 🎉🍾 Thanks for taking care of everyone, planning ahead and making sure we all have a good time. Wishing you swift progress on your treatment in Thailand and hope you have the greatest 30th with the gang! See you again soon!`,
+	},
+	{
 		creator: "Deepthi",
 		answer: "TWOCB",
 		message: `to my no1 forever yap buddy, happiest of happy birthdays!!! i can't believe ur finally 30 - feels like yesterday i was bullying u for being in the mature aged lounge at monash (u were only 23 😭). from 2019 MAC days, to long distance SHM and guessing all the countries of the world together, love u endlessly and i'm grateful to the universe for our friendship every day 🩷 i'll save the rest for ur bday card !!!`,

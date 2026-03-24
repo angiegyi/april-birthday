@@ -38,6 +38,24 @@ const crossword = [
 		message: "Happy birthday april!!",
 		url: "https://crosswordlabs.com/view/april-bday-ben",
 	},
+	{
+		creator: "Michael",
+		message:
+			"Happy Birthday April! Thank you for being such an amazing friend over the years! Love our rants about back pain and getting old. Can't wait to see you when you are back!",
+		url: "https://crosswordlabs.com/embed/happy-bd-april",
+	},
+	{
+		creator: "Joe",
+		message:
+			"Hope you have an amazing birthday. Your 30s is when you will thrive and heal ✨",
+		url: "https://crosswordlabs.com/view/hbd-apes",
+	},
+	{
+		creator: "Angus",
+		message:
+			"Happy 30th birthday april!! I can't believe the elders of the MAC committee (you and I) have finally hit 30. I'm so glad to have met you way back in campus centre and hearing you talk about this up and coming club called MAC. You've come a long way April and I can't wait to see all the achievements you're gonna make in your 30s. Hope to see you back in Melbourne soon for another mactivity!",
+		url: "https://crosswordlabs.com/view/mac-x-april",
+	},
 ];
 
 export default crossword;

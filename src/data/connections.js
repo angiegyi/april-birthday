@@ -7,7 +7,8 @@
 const connections = [
 	{
 		creator: "Angie",
-		message: "Happy Birthday Apes my older sister! ",
+		message:
+			"Happy Birthday Apes my older sister! I loveee you so freaking much, thank you for being the most amazing person in the entire world. You already know how much I adore you so I am going to instead BE EXCITED ABOUT HOW WE FINALLY GET TO GO TO LID TOGETHER FOR 2020 APRIL AND ANGIE YAYYY OUR FRIENDSHIP IS COMING FULL CIRCLE IM SO EXCITED so share that memory with you!! THeres nothing I wouldn't do for you and will love you until we ded <3 I CANT believe you're 30, this is gonna be the wisest and powerful you've ever been and I'm so excited to experience that with you!! I wish you a speedy recovery so we can headbang together <3 YOU ARE THE BADDEST AND STRONGEST PERSON IVE EVER MET IN MY LIFE",
 		groups: [
 			{
 				label: "April's Dream Lineup",
