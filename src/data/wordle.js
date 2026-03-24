@@ -23,6 +23,11 @@ const wordle = [
 		answer: "Kasbo",
 		message: `Happy birthday April!!! 🎉 Hope you have an absolutely baller day, you deserve nothing less. Thanks for always bringing the best energy and for introducing me to Sultan + Shepard and that one mashup with Lane 8 LOL`,
 	},
+	{
+		creator: "Deepthi",
+		answer: "TWOCB",
+		message: `to my no1 forever yap buddy, happiest of happy birthdays!!! i can't believe ur finally 30 - feels like yesterday i was bullying u for being in the mature aged lounge at monash (u were only 23 😭). from 2019 MAC days, to long distance SHM and guessing all the countries of the world together, love u endlessly and i'm grateful to the universe for our friendship every day 🩷 i'll save the rest for ur bday card !!!`,
+	},
 ];
 
 export default wordle;
