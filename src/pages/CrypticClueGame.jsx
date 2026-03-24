@@ -97,6 +97,8 @@ export default function CrypticClueGame() {
   const { index } = useParams()
   const puzzle = puzzles[Number(index)]
   const [solved, setSolved] = useState(false)
+  const [solvedParts, setSolvedParts] = useState(new Set())
+  const [showMegaAnswer, setShowMegaAnswer] = useState(false)
 
   if (!puzzle) {
     return (
@@ -109,6 +111,24 @@ export default function CrypticClueGame() {
     )
   }
 
+  const isMultiPart = puzzle.isMultiPart && puzzle.parts
+  
+  const handlePartSolved = (partIndex) => {
+    const newSolved = new Set(solvedParts)
+    newSolved.add(partIndex)
+    setSolvedParts(newSolved)
+    
+    // Check if all parts are solved
+    if (isMultiPart && newSolved.size === puzzle.parts.length) {
+      setShowMegaAnswer(true)
+      setSolved(true)
+    }
+  }
+
+  const handleSingleClueComplete = () => {
+    setSolved(true)
+  }
+
   return (
     <Layout>
       <div className="max-w-lg mx-auto">
@@ -117,11 +137,16 @@ export default function CrypticClueGame() {
         </div>
         <div className="text-center mb-8">
           <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
-          <h2 className="text-3xl font-bold text-black mb-2">Cryptic Clue</h2>
+          <h2 className="text-3xl font-bold text-black mb-2">{isMultiPart ? 'Multi-Part Cryptic Clue' : 'Cryptic Clue'}</h2>
           <p className="text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
             Cryptic clues have a definition hiding in plain sight, plus a wordplay twist.
             The number in brackets is the answer length.
           </p>
+          {isMultiPart && (
+            <p className="text-xs uppercase tracking-widest text-amber-600 mt-2">
+              {solvedParts.size} of {puzzle.parts.length} parts solved
+            </p>
+          )}
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6 text-sm text-amber-800">
@@ -134,18 +159,49 @@ export default function CrypticClueGame() {
           </ul>
         </div>
 
-        <ClueCard clue={puzzle.clue} answer={puzzle.answer} length={puzzle.length} explanation={puzzle.explanation} onSolved={() => setSolved(true)} />
-
-        {puzzle.bonusClues?.length > 0 && (
+        {isMultiPart ? (
           <>
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-4 text-center">Bonus Clues</p>
-            {puzzle.bonusClues.map((bc) => (
-              <ClueCard key={bc.answer} clue={bc.clue} answer={bc.answer} length={bc.length} explanation={bc.explanation} />
+            {puzzle.parts.map((part, partIndex) => (
+              <div key={partIndex}>
+                <div className={`mb-2 text-xs uppercase tracking-widest ${solvedParts.has(partIndex) ? 'text-green-600' : 'text-gray-400'}`}>
+                  Part {partIndex + 1} of {puzzle.parts.length}
+                </div>
+                <ClueCard 
+                  clue={part.clue} 
+                  answer={part.answer} 
+                  length={part.length} 
+                  explanation={part.explanation}
+                  onSolved={() => handlePartSolved(partIndex)}
+                />
+              </div>
             ))}
+
+            {showMegaAnswer && (
+              <div className="mt-8 border-4 border-black rounded-2xl p-8 bg-gradient-to-br from-yellow-50 to-yellow-100 text-center">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">Mega Answer</p>
+                <p className="text-4xl font-bold text-black mb-2">{puzzle.megaAnswer}</p>
+                <p className="text-sm text-gray-600 mb-4">You solved all parts! 🎉</p>
+                <div className="text-3xl">✨🎊✨</div>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <ClueCard clue={puzzle.clue} answer={puzzle.answer} length={puzzle.length} explanation={puzzle.explanation} onSolved={handleSingleClueComplete} />
+
+            {puzzle.bonusClues?.length > 0 && (
+              <>
+                <p className="text-xs uppercase tracking-widest text-gray-400 mb-4 text-center">Bonus Clues</p>
+                {puzzle.bonusClues.map((bc) => (
+                  <ClueCard key={bc.answer} clue={bc.clue} answer={bc.answer} length={bc.length} explanation={bc.explanation} />
+                ))}
+              </>
+            )}
           </>
         )}
 
-        {solved && <WinMessage creator={puzzle.creator} message={puzzle.message} />}
+        {solved && !isMultiPart && <WinMessage creator={puzzle.creator} message={puzzle.message} />}
+        {solved && isMultiPart && <WinMessage creator={puzzle.creator} message={puzzle.message} />}
       </div>
     </Layout>
   )
