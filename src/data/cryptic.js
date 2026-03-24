@@ -21,6 +21,28 @@ const cryptic = [
 		length: 8,
 		explanation: "horse time",
 	},
+	{
+		creator: "Marcus",
+		message: "",
+		clue: "Face card? A buried antique, been beheaded. (5)",
+		answer: "GEOGRAPHY QUEEN",
+		length: 5,
+	},
+	{
+		creator: "Marcus",
+		message: "",
+		clue: "Great explorers observe first, then plot. Why study old maps? (9)",
+		answer: "GEOGRAPHY QUEEN",
+		length: 9,
+	},
+	{
+		creator: "Deepthi",
+		message:
+			"to my no1 forever yap buddy, happiest of happy birthdays!!! i can't believe ur finally 30 - feels like yesterday i was bullying u for being in the mature aged lounge at monash (u were only 23 😭). from 2019 MAC days, to long distance SHM and guessing all the countries of the world together, love u endlessly and i'm grateful to the universe for our friendship every day 🩷 i'll save the rest for ur bday card !!!",
+		clue: `Crazy team's spirit comes first - swedish house mafia (10)`,
+		answer: "SOULMATES",
+		length: 10,
+	},
 ];
 
 export default cryptic;

@@ -122,6 +122,70 @@ const connections = [
 			},
 		],
 	},
+	{
+		creator: "Deepthi",
+		message:
+			"Happiest of birthdays slaypril!!!! Wish I was there in Thailand celebrating with you, but it's okay we can have a big party once you're back. Hope you get all the rest and recovery you need so you can also rampage Thailand 🙌",
+		groups: [
+			{
+				label: "Swedish House Mafia + Friends",
+				color: "yellow",
+				words: ["Armin Van Burren", "Alesso", "Hardwell", "Afrojack"],
+			},
+			{
+				label: "Tomorrowland 2024",
+				color: "green",
+				words: [
+					"David Guetta",
+					"Horsed Up Sub Zero",
+					"I Follow Rivers",
+					"Lost Mary",
+				],
+			},
+			{
+				label: "Iconic Memories",
+				color: "blue",
+				words: [
+					"IT Ball 2019",
+					"Panadol Gate",
+					"Prince Bandroom",
+					"Sydney Park Trip",
+				],
+			},
+			{
+				label: "Our Favourites",
+				color: "purple",
+				words: ["Gary De Snake", "No Doz Tim", "Oscar Piastri", "Pepe"],
+			},
+		],
+	},
+	{
+		creator: "Chloe",
+		message:
+			"Happiest of birthdays to you April! From the big green dot to the big 30. So grateful to have been on this wild ride with you and to have kept in touch all these years later. Can't wait for more exciting adventures together, see you in BOOM BICH! Miss you, love you – Chloe.",
+		groups: [
+			{
+				label: '"The Big D" — Deloitte Digital intern era',
+				color: "yellow",
+				words: ["GREEN DOT", "SLATE", "FATHER'S OFFICE", "VACATIONER"],
+			},
+			{
+				label: '"Also April" — Things that share her name',
+				color: "green",
+				words: ["LAVIGNE", "FOOLS", "LUDGATE", "SHOWERS"],
+			},
+			{
+				label: '"You Had To Be There" — Festivals she\'s attended',
+				color: "blue",
+				words: ["BOOM", "KINETIC FIELD", "POLO FIELDS", "HARDEST STYLES"],
+			},
+			{
+				label: '"This Never Happened" — Lane 8 deep cuts',
+				color: "purple",
+				words: ["CHILDISH", "ANJUNADEEP", "NO PHONES", "BRIGHTEST LIGHTS"],
+			},
+		],
+	},
 ];
 
 export default connections;
