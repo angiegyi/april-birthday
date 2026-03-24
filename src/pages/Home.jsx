@@ -47,6 +47,15 @@ const PUZZLES = [
     accent: 'bg-rose-600',
     label: 'Cryptic',
   },
+  {
+    path: '/make-24',
+    title: 'Make 24',
+    description: 'Use all four numbers with arithmetic to make exactly 24.',
+    icon: '🔢',
+    color: 'bg-orange-50 border-orange-200',
+    accent: 'bg-orange-600',
+    label: 'Numbers',
+  },
 ]
 
 export default function Home() {

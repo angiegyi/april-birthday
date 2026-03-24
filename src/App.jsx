@@ -10,6 +10,8 @@ import WordSearch from './pages/WordSearch'
 import WordSearchGame from './pages/WordSearchGame'
 import CrypticClue from './pages/CrypticClue'
 import CrypticClueGame from './pages/CrypticClueGame'
+import Make24 from './pages/Make24'
+import Make24Game from './pages/Make24Game'
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
         <Route path="/word-search/:index" element={<WordSearchGame />} />
         <Route path="/cryptic-clue" element={<CrypticClue />} />
         <Route path="/cryptic-clue/:index" element={<CrypticClueGame />} />
+        <Route path="/make-24" element={<Make24 />} />
+        <Route path="/make-24/:index" element={<Make24Game />} />
       </Routes>
     </BrowserRouter>
   )
