@@ -6,18 +6,18 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Top thin bar */}
-      <div className="font-ui bg-gray-900 text-white text-center py-1.5 text-xs tracking-widest uppercase font-medium">
+      <div className="bg-gray-900 text-white text-center py-1.5 text-[11px] tracking-widest uppercase font-medium">
         🎂 Happy Birthday, April! 🎂
       </div>
 
       {/* Main header */}
       <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center justify-between py-2.5 border-b border-gray-200">
-            <div className="font-ui text-xs text-gray-400 hidden sm:block tracking-wide">
+          <div className="flex items-center justify-between py-2.5 border-b border-gray-100">
+            <div className="text-[11px] text-gray-400 hidden sm:block tracking-wide">
               {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-            <div className="font-ui text-xs text-gray-400 tracking-wide">
+            <div className="text-[11px] text-gray-400 tracking-wide">
               Made with ❤️ by your friends
             </div>
           </div>
@@ -28,18 +28,18 @@ export default function Layout({ children }) {
                 The April Times
               </h1>
             </Link>
-            <p className="text-sm text-gray-500 mt-1.5 italic">
+            <p className="text-sm text-gray-400 mt-1.5 italic">
               "All the Birthday News That's Fit to Play"
             </p>
           </div>
 
           {/* Nav */}
-          <nav className="font-ui flex items-center justify-center gap-1 sm:gap-2 pb-0 overflow-x-auto -mb-px">
+          <nav className="flex items-center justify-center gap-1 sm:gap-4 pb-0 overflow-x-auto -mb-px">
             {[
               { path: '/', label: 'Home' },
               { path: '/wordle', label: 'Wordle' },
               { path: '/connections', label: 'Connections' },
-              { path: '/crossword', label: 'Mini Crossword' },
+              { path: '/crossword', label: 'Crossword' },
               { path: '/word-search', label: 'Word Search' },
               { path: '/cryptic-clue', label: 'Cryptic Clue' },
             ].map(({ path, label }) => {
@@ -48,7 +48,7 @@ export default function Layout({ children }) {
                 <Link
                   key={path}
                   to={path}
-                  className={`text-sm font-semibold whitespace-nowrap px-3 py-2.5 border-b-2 transition-all ${
+                  className={`text-[13px] font-semibold whitespace-nowrap px-3 py-2.5 border-b-2 transition-all ${
                     isActive
                       ? 'border-black text-black'
                       : 'border-transparent text-gray-400 hover:text-gray-700 hover:border-gray-300'
@@ -71,7 +71,7 @@ export default function Layout({ children }) {
       <footer className="bg-white border-t border-gray-200 mt-8 py-8">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="nyt-header-font text-2xl text-black mb-2">The April Times</p>
-          <p className="font-ui text-xs text-gray-400 tracking-wide">Happy Birthday, April! Wishing you all the joy in the world 🎉</p>
+          <p className="text-xs text-gray-400 tracking-wide">Happy Birthday, April! Wishing you all the joy in the world 🎉</p>
         </div>
       </footer>
     </div>

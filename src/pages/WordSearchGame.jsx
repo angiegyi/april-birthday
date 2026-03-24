@@ -95,12 +95,12 @@ export default function WordSearchGame() {
     <Layout>
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/word-search" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Word Searches</Link>
+          <Link to="/word-search" className="text-[13px] text-gray-400 hover:text-black transition-colors">← All Word Searches</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {creator}</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Word Search</h2>
-          <p className="font-ui text-sm text-gray-500">Find all the hidden words — click and drag to select.</p>
+          <p className="text-[13px] text-gray-500">Find all the hidden words — click and drag to select.</p>
         </div>
 
         {allFound && (
@@ -121,7 +121,7 @@ export default function WordSearchGame() {
                     return (
                       <div
                         key={c}
-                        className={`font-grid w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded-sm transition-colors
+                        className={`w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded-sm transition-colors
                           ${isSel ? 'bg-gray-400 text-white' : colorClass || 'hover:bg-gray-100 text-black'}`}
                         onMouseDown={() => handleMouseDown(r, c)}
                         onMouseEnter={() => handleMouseEnter(r, c)}
@@ -136,7 +136,7 @@ export default function WordSearchGame() {
           </div>
 
           <div className="flex-shrink-0">
-            <p className="font-ui font-bold text-xs uppercase tracking-wider text-gray-400 mb-3 border-b border-gray-200 pb-1">Words to Find</p>
+            <p className="font-bold text-[11px] uppercase tracking-wider text-gray-400 mb-3 border-b border-gray-200 pb-1">Words to Find</p>
             <ul className="space-y-2">
               {words.map((word, idx) => {
                 const done = foundWords.includes(word)
@@ -151,7 +151,7 @@ export default function WordSearchGame() {
                 )
               })}
             </ul>
-            <p className="mt-4 text-xs text-gray-400">{foundWords.length}/{words.length} found</p>
+            <p className="mt-4 text-[11px] text-gray-400">{foundWords.length}/{words.length} found</p>
           </div>
         </div>
 

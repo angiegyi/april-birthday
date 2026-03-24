@@ -96,12 +96,12 @@ export default function ConnectionsGame() {
     <Layout>
       <div className="max-w-xl mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/connections" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Connections</Link>
+          <Link to="/connections" className="text-[13px] text-gray-400 hover:text-black transition-colors">← All Connections</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {puzzle.creator}</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {puzzle.creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Connections</h2>
-          <p className="font-ui text-sm text-gray-500">Find four groups of four related words.</p>
+          <p className="text-[13px] text-gray-500">Find four groups of four related words.</p>
         </div>
 
         {message && (
@@ -132,7 +132,7 @@ export default function ConnectionsGame() {
                 <button
                   key={word}
                   onClick={() => toggle(word)}
-                  className={`font-grid py-3 px-1 rounded-xl font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
+                  className={`py-3 px-1 rounded-xl font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
                     ${isSel
                       ? 'bg-gray-800 text-white ring-2 ring-black scale-95'
                       : 'bg-gray-100 text-black hover:bg-gray-200'
@@ -162,7 +162,7 @@ export default function ConnectionsGame() {
 
         {/* Mistake dots */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="font-ui text-sm text-gray-400">Mistakes remaining:</span>
+          <span className="text-[13px] text-gray-400">Mistakes remaining:</span>
           {Array.from({ length: 4 }).map((_, i) => (
             <span key={i} className={`w-3 h-3 rounded-full transition-colors ${i < mistakes ? 'bg-gray-700' : 'bg-gray-200'}`} />
           ))}
@@ -173,16 +173,16 @@ export default function ConnectionsGame() {
           <div className="flex justify-center gap-3">
             <button
               onClick={() => setSelected([])}
-              className="font-ui px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100 transition-colors"
+              className="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
               Deselect All
             </button>
             <button
               onClick={submit}
               disabled={selected.length !== 4}
-              className={`font-ui px-6 py-2 rounded-full text-sm font-semibold transition-all
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all
                 ${selected.length === 4
-                  ? 'bg-black text-white hover:bg-gray-800 btn-primary'
+                  ? 'bg-black text-white hover:bg-gray-800'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 }`}
             >
@@ -192,7 +192,7 @@ export default function ConnectionsGame() {
         )}
 
         {/* Color key */}
-        <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs text-gray-400">
+        <div className="mt-6 flex flex-wrap justify-center gap-3 text-[11px] text-gray-400">
           {[['yellow','Easiest'],['green','Easy'],['blue','Hard'],['purple','Hardest']].map(([name, label]) => (
             <span key={name} className="flex items-center gap-1">
               <span className={`w-3 h-3 rounded-sm ${COLOR_CLASSES[name].bg}`}></span>

@@ -9,7 +9,7 @@ export default function Crossword() {
         <div className="text-center mb-10">
           <span className="text-5xl block mb-3">✏️</span>
           <h2 className="playfair text-4xl font-bold text-black mb-3">Mini Crossword</h2>
-          <p className="text-gray-600 leading-relaxed">A birthday-themed crossword puzzle. Click a puzzle to play!</p>
+          <p className="text-[15px] text-gray-500 leading-relaxed">A birthday-themed crossword puzzle. Click a puzzle to play!</p>
         </div>
 
         {/* Puzzle list */}
@@ -20,27 +20,27 @@ export default function Crossword() {
               href={puzzle.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="lobby-item flex items-center justify-between p-5 border-2 border-gray-200 bg-white hover:border-black hover:bg-black hover:text-white group"
+              className="lobby-item flex items-center justify-between p-5 border border-gray-200 bg-white hover:border-black hover:bg-black hover:text-white group"
             >
               <div className="flex items-center gap-4">
-                <span className="font-grid text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none">
+                <span className="text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none tabular-nums">
                   {index + 1}
                 </span>
                 <div>
-                  <p className="text-lg font-bold">{puzzle.creator}</p>
-                  <p className="text-sm text-gray-500 group-hover:text-gray-300">
+                  <p className="text-base font-semibold">{puzzle.creator}</p>
+                  <p className="text-[13px] text-gray-400 group-hover:text-gray-300">
                     {puzzle.message}
                   </p>
                 </div>
               </div>
-              <span className="text-2xl play-arrow">↗</span>
+              <span className="text-xl play-arrow">↗</span>
             </a>
           ))}
         </div>
 
         {puzzles.length === 0 && (
           <div className="text-center py-16 text-gray-400">
-            <p className="text-lg">No puzzles yet — check back soon!</p>
+            <p className="text-base">No puzzles yet — check back soon!</p>
           </div>
         )}
       </div>

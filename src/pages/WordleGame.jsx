@@ -28,7 +28,7 @@ function getTileSize(wordLength) {
 
 function getTileClass(state, revealed, wordLength) {
   const size = getTileSize(wordLength)
-  const base = `${size} font-grid flex items-center justify-center font-bold border-2 uppercase transition-all duration-300 select-none rounded-sm`
+  const base = `${size} flex items-center justify-center font-bold border-2 uppercase transition-all duration-300 select-none rounded-sm`
   if (!revealed) {
     if (state === 'empty') return `${base} border-gray-200 text-black`
     return `${base} border-gray-500 text-black`
@@ -53,7 +53,7 @@ function getKeyClass(letter, guesses, answer) {
     }
     if (best === 'correct') break
   }
-  const base = 'h-14 px-2 sm:px-3 rounded-lg font-grid font-bold text-sm flex items-center justify-center cursor-pointer select-none transition-all min-w-[2rem] sm:min-w-[2.5rem]'
+  const base = 'h-14 px-2 sm:px-3 rounded-lg font-bold text-sm flex items-center justify-center cursor-pointer select-none transition-all min-w-[2rem] sm:min-w-[2.5rem]'
   switch (best) {
     case 'correct': return `${base} bg-green-600 text-white`
     case 'present': return `${base} bg-yellow-500 text-white`
@@ -138,13 +138,13 @@ export default function WordleGame() {
     <Layout>
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/wordle" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Wordles</Link>
+          <Link to="/wordle" className="text-[13px] text-gray-400 hover:text-black transition-colors">← All Wordles</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {puzzle.creator}</p>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {puzzle.creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Wordle</h2>
-          <p className="font-ui text-sm text-gray-500">Guess the {WORD_LENGTH}-letter word in 6 tries.</p>
-          <div className="font-ui text-xs text-gray-400 mt-2 space-x-4">
+          <p className="text-[13px] text-gray-500">Guess the {WORD_LENGTH}-letter word in 6 tries.</p>
+          <div className="text-[11px] text-gray-400 mt-2 space-x-4">
             <span className="inline-flex items-center gap-1"><span className="w-3 h-3 bg-green-600 inline-block rounded-sm"></span> Correct</span>
             <span className="inline-flex items-center gap-1"><span className="w-3 h-3 bg-yellow-500 inline-block rounded-sm"></span> Wrong spot</span>
             <span className="inline-flex items-center gap-1"><span className="w-3 h-3 bg-gray-700 inline-block rounded-sm"></span> Not in word</span>
@@ -195,7 +195,7 @@ export default function WordleGame() {
 
         {!gameOver && (
           <div className="text-center mb-4">
-            <button onClick={() => setShowHint(h => !h)} className="font-ui text-xs text-gray-400 underline hover:text-gray-600 transition-colors">
+            <button onClick={() => setShowHint(h => !h)} className="text-xs text-gray-400 underline hover:text-gray-600 transition-colors">
               {showHint ? 'Hide hint' : 'Need a hint?'}
             </button>
             {showHint && <p className="text-sm text-gray-500 italic mt-1">{puzzle.hint}</p>}
