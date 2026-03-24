@@ -99,9 +99,9 @@ export default function ConnectionsGame() {
           <Link to="/connections" className="text-sm text-gray-500 hover:text-black">← All Connections</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
-          <h2 className="text-3xl font-bold text-black mb-2">Connections</h2>
-          <p className="text-sm text-gray-600">Find four groups of four related words.</p>
+          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
+          <h2 className="playfair text-3xl font-bold text-black mb-2">Connections</h2>
+          <p className="font-ui text-sm text-gray-600">Find four groups of four related words.</p>
         </div>
 
         {message && (
@@ -132,7 +132,7 @@ export default function ConnectionsGame() {
                 <button
                   key={word}
                   onClick={() => toggle(word)}
-                  className={`py-3 px-1 rounded-lg font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
+                  className={`font-grid py-3 px-1 rounded-lg font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
                     ${isSel
                       ? 'bg-gray-800 text-white ring-2 ring-black'
                       : 'bg-gray-100 text-black hover:bg-gray-200'
@@ -162,7 +162,7 @@ export default function ConnectionsGame() {
 
         {/* Mistake dots */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="text-sm text-gray-500">Mistakes remaining:</span>
+          <span className="font-ui text-sm text-gray-500">Mistakes remaining:</span>
           {Array.from({ length: 4 }).map((_, i) => (
             <span key={i} className={`w-3 h-3 rounded-full ${i < mistakes ? 'bg-gray-700' : 'bg-gray-200'}`} />
           ))}
@@ -173,14 +173,14 @@ export default function ConnectionsGame() {
           <div className="flex justify-center gap-3">
             <button
               onClick={() => setSelected([])}
-              className="px-4 py-2 rounded-full border border-gray-400 text-sm font-semibold hover:bg-gray-100"
+              className="font-ui px-4 py-2 rounded-full border border-gray-400 text-sm font-semibold hover:bg-gray-100"
             >
               Deselect All
             </button>
             <button
               onClick={submit}
               disabled={selected.length !== 4}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors
+              className={`font-ui px-6 py-2 rounded-full text-sm font-semibold transition-colors
                 ${selected.length === 4
                   ? 'bg-black text-white hover:bg-gray-800'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'

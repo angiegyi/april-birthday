@@ -116,9 +116,9 @@ export default function CrosswordGame() {
           <Link to="/crossword" className="text-sm text-gray-500 hover:text-black">← All Crosswords</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
-          <h2 className="text-3xl font-bold text-black mb-2">Mini Crossword</h2>
-          <p className="text-sm text-gray-600">Click a square and start typing. Click again to switch direction.</p>
+          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
+          <h2 className="playfair text-3xl font-bold text-black mb-2">Mini Crossword</h2>
+          <p className="font-ui text-sm text-gray-600">Click a square and start typing. Click again to switch direction.</p>
         </div>
 
         {isWon && (
@@ -156,7 +156,7 @@ export default function CrosswordGame() {
                             onFocus={() => setSelected({ r, c })}
                             readOnly
                           />
-                          <span className={`text-lg font-bold uppercase select-none
+                          <span className={`font-grid text-lg font-bold uppercase select-none
                             ${revealed ? 'text-gray-400' : wrong ? 'text-red-500' : 'text-black'}`}>
                             {revealed ? answerGrid[r][c] : userGrid[r][c]}
                           </span>
@@ -168,22 +168,22 @@ export default function CrosswordGame() {
               )}
             </div>
             <div className="flex gap-2 mt-3 justify-center">
-              <button onClick={() => setChecked(true)} className="px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Check</button>
-              <button onClick={() => setRevealed(true)} className="px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Reveal</button>
+              <button onClick={() => setChecked(true)} className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Check</button>
+              <button onClick={() => setRevealed(true)} className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Reveal</button>
               <button onClick={() => { setUserGrid(Array.from({ length: ROWS }, () => Array(COLS).fill(''))); setChecked(false); setRevealed(false) }}
-                className="px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Clear</button>
+                className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Clear</button>
             </div>
           </div>
 
           <div className="flex-1 min-w-0 text-sm space-y-5">
             <div>
-              <p className="font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Across</p>
+              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Across</p>
               {cluesAcross.map(({ number, clue }) => (
                 <p key={number} className="mb-1.5"><span className="font-bold">{number}.</span> {clue}</p>
               ))}
             </div>
             <div>
-              <p className="font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Down</p>
+              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Down</p>
               {cluesDown.map(({ number, clue }) => (
                 <p key={number} className="mb-1.5"><span className="font-bold">{number}.</span> {clue}</p>
               ))}

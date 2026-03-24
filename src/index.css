@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Franklin:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;700&family=UnifrakturMaguntia&display=swap');
 
 @import "tailwindcss";
 
@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: Georgia, 'Times New Roman', serif;
   background-color: #ffffff;
   color: #121212;
 }
@@ -23,6 +23,17 @@ body {
   font-family: 'UnifrakturMaguntia', Georgia, serif;
 }
 
+/* Headlines */
 .playfair {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* UI text: nav, buttons, labels, small UI elements */
+.font-ui {
+  font-family: 'Libre Franklin', system-ui, sans-serif;
+}
+
+/* Grid text: crossword cells, wordle tiles, word search letters */
+.font-grid {
+  font-family: 'Roboto Slab', 'Rockwell', Georgia, serif;
 }

@@ -8,7 +8,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
         {/* Header */}
         <div className="text-center mb-10">
           <span className="text-5xl block mb-3">{icon}</span>
-          <h2 className="text-4xl font-bold text-black mb-3">{title}</h2>
+          <h2 className="playfair text-4xl font-bold text-black mb-3">{title}</h2>
           <p className="text-gray-600">{description}</p>
         </div>
 
@@ -21,7 +21,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
               className="flex items-center justify-between p-5 border-2 border-black rounded-xl hover:bg-black hover:text-white transition-colors group"
             >
               <div className="flex items-center gap-4">
-                <span className="text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none">
+                <span className="font-grid text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none">
                   {index + 1}
                 </span>
                 <div>

@@ -54,12 +54,12 @@ export default function Home() {
     <Layout>
       {/* Hero section */}
       <div className="text-center mb-10 border-b border-gray-200 pb-10">
-        <p className="text-base text-gray-500 uppercase tracking-widest mb-2">Special Edition</p>
+        <p className="font-ui text-base text-gray-500 uppercase tracking-widest mb-2">🎂 Special Edition 🎂</p>
         <h2 className="playfair text-4xl sm:text-5xl font-bold text-black mb-4 leading-tight">
           April's Birthday Games
         </h2>
         <p className="text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Your friends have put together five puzzles just for you. Play them all and see how well you know yourself!
+          Personalised puzzles for everyone's puzzle queen. Made for our favourite, by your favourites 🩷
         </p>
       </div>
 
@@ -70,13 +70,13 @@ export default function Home() {
             <div className={`border rounded-lg p-6 h-full transition-all group-hover:shadow-md group-hover:-translate-y-0.5 ${puzzle.color}`}>
               <div className="flex items-start justify-between mb-3">
                 <span className="text-3xl">{puzzle.icon}</span>
-                <span className={`text-xs text-white px-2 py-1 rounded-full font-semibold uppercase tracking-wide ${puzzle.accent}`}>
+                <span className={`font-ui text-xs text-white px-2 py-1 rounded-full font-semibold uppercase tracking-wide ${puzzle.accent}`}>
                   {puzzle.label}
                 </span>
               </div>
               <h3 className="playfair text-xl font-bold text-black mb-2">{puzzle.title}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">{puzzle.description}</p>
-              <div className="mt-4 text-sm font-semibold text-black group-hover:underline">
+              <div className="font-ui mt-4 text-sm font-semibold text-black group-hover:underline">
                 Play now →
               </div>
             </div>
@@ -86,9 +86,9 @@ export default function Home() {
 
       {/* Birthday message section */}
       <div className="border-t-2 border-black border-b-2 py-8 text-center">
-        <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">A message from your friends</p>
+        <p className="font-ui text-sm uppercase tracking-widest text-gray-500 mb-3">💌 A message from your friends</p>
         <blockquote className="playfair text-2xl italic text-black max-w-2xl mx-auto leading-relaxed">
-          "Happy Birthday, April! We made you puzzles because you deserve only the best kind of suffering."
+          "Happy Birthday, April! We made you puzzles because you deserve only the best kind of suffering." 🥳
         </blockquote>
       </div>
     </Layout>

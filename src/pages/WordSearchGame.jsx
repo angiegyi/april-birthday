@@ -98,9 +98,9 @@ export default function WordSearchGame() {
           <Link to="/word-search" className="text-sm text-gray-500 hover:text-black">← All Word Searches</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
-          <h2 className="text-3xl font-bold text-black mb-2">Word Search</h2>
-          <p className="text-sm text-gray-600">Find all the hidden words — click and drag to select.</p>
+          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
+          <h2 className="playfair text-3xl font-bold text-black mb-2">Word Search</h2>
+          <p className="font-ui text-sm text-gray-600">Find all the hidden words — click and drag to select.</p>
         </div>
 
         {allFound && (
@@ -121,7 +121,7 @@ export default function WordSearchGame() {
                     return (
                       <div
                         key={c}
-                        className={`w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded transition-colors
+                        className={`font-grid w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded transition-colors
                           ${isSel ? 'bg-gray-400 text-white' : colorClass || 'hover:bg-gray-100 text-black'}`}
                         onMouseDown={() => handleMouseDown(r, c)}
                         onMouseEnter={() => handleMouseEnter(r, c)}
@@ -136,7 +136,7 @@ export default function WordSearchGame() {
           </div>
 
           <div className="flex-shrink-0">
-            <p className="font-bold text-xs uppercase tracking-wider text-gray-500 mb-3 border-b pb-1">Words to Find</p>
+            <p className="font-ui font-bold text-xs uppercase tracking-wider text-gray-500 mb-3 border-b pb-1">Words to Find</p>
             <ul className="space-y-2">
               {words.map((word, idx) => {
                 const done = foundWords.includes(word)

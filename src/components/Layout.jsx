@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Top thin bar */}
-      <div className="bg-black text-white text-center py-1 text-xs tracking-widest uppercase">
+      <div className="font-ui bg-black text-white text-center py-1 text-xs tracking-widest uppercase">
         🎂 Happy Birthday, April! 🎂
       </div>
 
@@ -15,10 +15,10 @@ export default function Layout({ children }) {
       <header className="border-b-2 border-black">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex items-center justify-between py-2 border-b border-gray-300">
-            <div className="text-xs text-gray-500 hidden sm:block">
+            <div className="font-ui text-xs text-gray-500 hidden sm:block">
               {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-            <div className="text-xs text-gray-500">
+            <div className="font-ui text-xs text-gray-500">
               Made with ❤️ by your friends
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
           </div>
 
           {/* Nav */}
-          <nav className="flex items-center justify-center gap-6 pb-3 overflow-x-auto">
+          <nav className="font-ui flex items-center justify-center gap-6 pb-3 overflow-x-auto">
             {[
               { path: '/', label: 'Home' },
               { path: '/wordle', label: 'Wordle' },
@@ -69,7 +69,7 @@ export default function Layout({ children }) {
       <footer className="border-t-2 border-black mt-8 py-6">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="nyt-header-font text-2xl text-black mb-2">The April Times</p>
-          <p className="text-xs text-gray-500">Happy Birthday, April! Wishing you all the joy in the world 🎉</p>
+          <p className="font-ui text-xs text-gray-500">Happy Birthday, April! Wishing you all the joy in the world 🎉</p>
         </div>
       </footer>
     </div>

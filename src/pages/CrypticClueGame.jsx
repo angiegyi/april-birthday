@@ -47,7 +47,7 @@ function ClueCard({ clue, answer, length, explanation, onSolved }) {
               value={input[i]}
               onChange={e => handleChange(i, e.target.value)}
               onKeyDown={e => handleKeyDown(e, i)}
-              className={`w-10 h-12 text-center text-lg font-bold uppercase border-b-2 bg-white rounded-sm outline-none
+              className={`font-grid w-10 h-12 text-center text-lg font-bold uppercase border-b-2 bg-white rounded-sm outline-none
                 ${submitted && !revealed
                   ? correct ? 'border-green-500 text-green-700' : 'border-red-400 text-red-600'
                   : revealed ? 'border-gray-300 text-gray-400' : 'border-black text-black focus:border-blue-500'
@@ -74,7 +74,7 @@ function ClueCard({ clue, answer, length, explanation, onSolved }) {
           <button
             onClick={submit}
             disabled={userAnswer.length < length}
-            className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors
+            className={`font-ui px-5 py-2 rounded-full text-sm font-semibold transition-colors
               ${userAnswer.length === length ? 'bg-black text-white hover:bg-gray-800' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
           >
             Submit
@@ -83,7 +83,7 @@ function ClueCard({ clue, answer, length, explanation, onSolved }) {
         {!revealed && (
           <button
             onClick={() => { setRevealed(true); setInput(answer.split('')) }}
-            className="px-5 py-2 rounded-full text-sm font-semibold border border-gray-400 hover:bg-gray-100"
+            className="font-ui px-5 py-2 rounded-full text-sm font-semibold border border-gray-400 hover:bg-gray-100"
           >
             Reveal Answer
           </button>
@@ -136,8 +136,8 @@ export default function CrypticClueGame() {
           <Link to="/cryptic-clue" className="text-sm text-gray-500 hover:text-black">← All Cryptic Clues</Link>
         </div>
         <div className="text-center mb-8">
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
-          <h2 className="text-3xl font-bold text-black mb-2">{isMultiPart ? 'Multi-Part Cryptic Clue' : 'Cryptic Clue'}</h2>
+          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
+          <h2 className="playfair text-3xl font-bold text-black mb-2">{isMultiPart ? 'Multi-Part Cryptic Clue' : 'Cryptic Clue'}</h2>
           <p className="text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
             Cryptic clues have a definition hiding in plain sight, plus a wordplay twist.
             The number in brackets is the answer length.
