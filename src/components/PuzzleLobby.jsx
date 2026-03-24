@@ -9,7 +9,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
         <div className="text-center mb-10">
           <span className="text-5xl block mb-3">{icon}</span>
           <h2 className="playfair text-4xl font-bold text-black mb-3">{title}</h2>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 leading-relaxed">{description}</p>
         </div>
 
         {/* Puzzle list */}
@@ -18,7 +18,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
             <Link
               key={index}
               to={`${basePath}/${index}`}
-              className="flex items-center justify-between p-5 border-2 border-black rounded-xl hover:bg-black hover:text-white transition-colors group"
+              className="lobby-item flex items-center justify-between p-5 border-2 border-gray-200 bg-white hover:border-black hover:bg-black hover:text-white group"
             >
               <div className="flex items-center gap-4">
                 <span className="font-grid text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none">
@@ -31,7 +31,7 @@ export default function PuzzleLobby({ title, description, icon, basePath, puzzle
                   </p>
                 </div>
               </div>
-              <span className="text-2xl">→</span>
+              <span className="text-2xl play-arrow">→</span>
             </Link>
           ))}
         </div>

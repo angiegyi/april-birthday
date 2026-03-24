@@ -95,23 +95,23 @@ export default function WordSearchGame() {
     <Layout>
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/word-search" className="text-sm text-gray-500 hover:text-black">← All Word Searches</Link>
+          <Link to="/word-search" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Word Searches</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
+          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Word Search</h2>
-          <p className="font-ui text-sm text-gray-600">Find all the hidden words — click and drag to select.</p>
+          <p className="font-ui text-sm text-gray-500">Find all the hidden words — click and drag to select.</p>
         </div>
 
         {allFound && (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center mb-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center mb-4">
             <p className="text-green-700 font-bold">🎉 You found all the words!</p>
           </div>
         )}
 
         <div className="flex flex-col sm:flex-row gap-8 items-start justify-center">
           <div className="select-none cursor-crosshair flex-shrink-0" onMouseLeave={handleMouseUp} onMouseUp={handleMouseUp}>
-            <div className="inline-flex flex-col gap-0.5 border-2 border-black p-1 bg-white">
+            <div className="inline-flex flex-col gap-0.5 border border-gray-200 p-1.5 bg-white rounded-xl shadow-sm">
               {grid.map((row, r) => (
                 <div key={r} className="flex gap-0.5">
                   {row.map((letter, c) => {
@@ -121,7 +121,7 @@ export default function WordSearchGame() {
                     return (
                       <div
                         key={c}
-                        className={`font-grid w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded transition-colors
+                        className={`font-grid w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded-sm transition-colors
                           ${isSel ? 'bg-gray-400 text-white' : colorClass || 'hover:bg-gray-100 text-black'}`}
                         onMouseDown={() => handleMouseDown(r, c)}
                         onMouseEnter={() => handleMouseEnter(r, c)}
@@ -136,14 +136,14 @@ export default function WordSearchGame() {
           </div>
 
           <div className="flex-shrink-0">
-            <p className="font-ui font-bold text-xs uppercase tracking-wider text-gray-500 mb-3 border-b pb-1">Words to Find</p>
+            <p className="font-ui font-bold text-xs uppercase tracking-wider text-gray-400 mb-3 border-b border-gray-200 pb-1">Words to Find</p>
             <ul className="space-y-2">
               {words.map((word, idx) => {
                 const done = foundWords.includes(word)
                 return (
                   <li key={word} className="flex items-center gap-2">
                     {done
-                      ? <span className={`px-2 py-0.5 rounded text-sm font-semibold line-through ${WORD_COLORS[idx % WORD_COLORS.length]}`}>{word}</span>
+                      ? <span className={`px-2 py-0.5 rounded-md text-sm font-semibold line-through ${WORD_COLORS[idx % WORD_COLORS.length]}`}>{word}</span>
                       : <span className="px-2 py-0.5 text-sm font-semibold text-gray-700">{word}</span>
                     }
                     {done && <span className="text-green-500 text-xs">✓</span>}

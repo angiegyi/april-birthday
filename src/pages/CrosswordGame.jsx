@@ -113,23 +113,23 @@ export default function CrosswordGame() {
     <Layout>
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/crossword" className="text-sm text-gray-500 hover:text-black">← All Crosswords</Link>
+          <Link to="/crossword" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Crosswords</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {creator}</p>
+          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Mini Crossword</h2>
-          <p className="font-ui text-sm text-gray-600">Click a square and start typing. Click again to switch direction.</p>
+          <p className="font-ui text-sm text-gray-500">Click a square and start typing. Click again to switch direction.</p>
         </div>
 
         {isWon && (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center mb-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center mb-4">
             <p className="text-green-700 font-bold">🎉 Well done! Puzzle complete!</p>
           </div>
         )}
 
         <div className="flex flex-col sm:flex-row gap-8 items-start justify-center">
           <div className="flex-shrink-0">
-            <div className="inline-grid gap-px bg-black p-px border-2 border-black" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
+            <div className="inline-grid gap-px bg-gray-300 p-px border border-gray-300 rounded-lg overflow-hidden" style={{ gridTemplateColumns: `repeat(${COLS}, 1fr)` }}>
               {answerGrid.map((row, r) =>
                 row.map((cell, c) => {
                   const num = NUMBER_GRID[r][c]
@@ -141,11 +141,11 @@ export default function CrosswordGame() {
                     <div
                       key={`${r}-${c}`}
                       className={`relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center cursor-pointer
-                        ${black ? 'bg-black' : isSel ? 'bg-yellow-200' : inWord ? 'bg-blue-100' : 'bg-white'}`}
+                        ${black ? 'bg-gray-800' : isSel ? 'bg-yellow-200' : inWord ? 'bg-blue-100' : 'bg-white'}`}
                       onClick={() => handleCellClick(r, c)}
                     >
                       {!black && num && (
-                        <span className="absolute top-0.5 left-0.5 text-[9px] font-bold text-black leading-none">{num}</span>
+                        <span className="absolute top-0.5 left-0.5 text-[9px] font-bold text-gray-500 leading-none">{num}</span>
                       )}
                       {!black && (
                         <>
@@ -167,23 +167,23 @@ export default function CrosswordGame() {
                 })
               )}
             </div>
-            <div className="flex gap-2 mt-3 justify-center">
-              <button onClick={() => setChecked(true)} className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Check</button>
-              <button onClick={() => setRevealed(true)} className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Reveal</button>
+            <div className="flex gap-2 mt-4 justify-center">
+              <button onClick={() => setChecked(true)} className="font-ui px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-100 font-semibold transition-colors">Check</button>
+              <button onClick={() => setRevealed(true)} className="font-ui px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-100 font-semibold transition-colors">Reveal</button>
               <button onClick={() => { setUserGrid(Array.from({ length: ROWS }, () => Array(COLS).fill(''))); setChecked(false); setRevealed(false) }}
-                className="font-ui px-4 py-2 text-sm border border-gray-400 rounded-full hover:bg-gray-100 font-semibold">Clear</button>
+                className="font-ui px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-100 font-semibold transition-colors">Clear</button>
             </div>
           </div>
 
           <div className="flex-1 min-w-0 text-sm space-y-5">
             <div>
-              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Across</p>
+              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-400 mb-2 border-b border-gray-200 pb-1">Across</p>
               {cluesAcross.map(({ number, clue }) => (
                 <p key={number} className="mb-1.5"><span className="font-bold">{number}.</span> {clue}</p>
               ))}
             </div>
             <div>
-              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-500 mb-2 border-b pb-1">Down</p>
+              <p className="font-ui font-bold uppercase tracking-wider text-xs text-gray-400 mb-2 border-b border-gray-200 pb-1">Down</p>
               {cluesDown.map(({ number, clue }) => (
                 <p key={number} className="mb-1.5"><span className="font-bold">{number}.</span> {clue}</p>
               ))}

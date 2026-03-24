@@ -9,7 +9,7 @@ export default function Crossword() {
         <div className="text-center mb-10">
           <span className="text-5xl block mb-3">✏️</span>
           <h2 className="playfair text-4xl font-bold text-black mb-3">Mini Crossword</h2>
-          <p className="text-gray-600">A birthday-themed crossword puzzle. Click a puzzle to play!</p>
+          <p className="text-gray-600 leading-relaxed">A birthday-themed crossword puzzle. Click a puzzle to play!</p>
         </div>
 
         {/* Puzzle list */}
@@ -20,7 +20,7 @@ export default function Crossword() {
               href={puzzle.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-5 border-2 border-black rounded-xl hover:bg-black hover:text-white transition-colors group"
+              className="lobby-item flex items-center justify-between p-5 border-2 border-gray-200 bg-white hover:border-black hover:bg-black hover:text-white group"
             >
               <div className="flex items-center gap-4">
                 <span className="font-grid text-2xl font-bold text-gray-300 group-hover:text-gray-500 w-8 select-none">
@@ -33,7 +33,7 @@ export default function Crossword() {
                   </p>
                 </div>
               </div>
-              <span className="text-2xl">↗</span>
+              <span className="text-2xl play-arrow">↗</span>
             </a>
           ))}
         </div>

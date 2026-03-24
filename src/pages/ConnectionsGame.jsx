@@ -26,7 +26,7 @@ export default function ConnectionsGame() {
 
   const [words] = useState(() => shuffle(puzzle.groups.flatMap(g => g.words)))
   const [selected, setSelected] = useState([])
-  const [solved, setSolved] = useState([]) // solved group labels
+  const [solved, setSolved] = useState([])
   const [mistakes, setMistakes] = useState(4)
   const [message, setMessage] = useState('')
   const [gameOver, setGameOver] = useState(false)
@@ -96,16 +96,16 @@ export default function ConnectionsGame() {
     <Layout>
       <div className="max-w-xl mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/connections" className="text-sm text-gray-500 hover:text-black">← All Connections</Link>
+          <Link to="/connections" className="font-ui text-sm text-gray-400 hover:text-black transition-colors">← All Connections</Link>
         </div>
         <div className="text-center mb-6">
-          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-1">Puzzle by {puzzle.creator}</p>
+          <p className="font-ui text-xs uppercase tracking-[0.2em] text-gray-400 mb-1 font-medium">Puzzle by {puzzle.creator}</p>
           <h2 className="playfair text-3xl font-bold text-black mb-2">Connections</h2>
-          <p className="font-ui text-sm text-gray-600">Find four groups of four related words.</p>
+          <p className="font-ui text-sm text-gray-500">Find four groups of four related words.</p>
         </div>
 
         {message && (
-          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-black text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg text-center">
+          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-lg text-center">
             {message}
           </div>
         )}
@@ -115,7 +115,7 @@ export default function ConnectionsGame() {
           {solvedGroups.map(g => {
             const c = COLOR_CLASSES[g.color]
             return (
-              <div key={g.label} className={`${c.bg} rounded-lg p-4 text-center`}>
+              <div key={g.label} className={`${c.bg} rounded-xl p-4 text-center`}>
                 <p className={`font-bold text-sm uppercase tracking-wider ${c.text}`}>{g.label}</p>
                 <p className={`text-sm mt-1 ${c.text}`}>{g.words.join(', ')}</p>
               </div>
@@ -132,9 +132,9 @@ export default function ConnectionsGame() {
                 <button
                   key={word}
                   onClick={() => toggle(word)}
-                  className={`font-grid py-3 px-1 rounded-lg font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
+                  className={`font-grid py-3 px-1 rounded-xl font-bold text-xs sm:text-sm uppercase text-center transition-all cursor-pointer select-none leading-tight
                     ${isSel
-                      ? 'bg-gray-800 text-white ring-2 ring-black'
+                      ? 'bg-gray-800 text-white ring-2 ring-black scale-95'
                       : 'bg-gray-100 text-black hover:bg-gray-200'
                     }`}
                 >
@@ -151,7 +151,7 @@ export default function ConnectionsGame() {
             {puzzle.groups.filter(g => !solved.includes(g.label)).map(g => {
               const c = COLOR_CLASSES[g.color]
               return (
-                <div key={g.label} className={`${c.light} border ${c.border} rounded-lg p-4 text-center`}>
+                <div key={g.label} className={`${c.light} border ${c.border} rounded-xl p-4 text-center`}>
                   <p className="font-bold text-sm uppercase tracking-wider text-gray-700">{g.label}</p>
                   <p className="text-sm mt-1 text-gray-600">{g.words.join(', ')}</p>
                 </div>
@@ -162,9 +162,9 @@ export default function ConnectionsGame() {
 
         {/* Mistake dots */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="font-ui text-sm text-gray-500">Mistakes remaining:</span>
+          <span className="font-ui text-sm text-gray-400">Mistakes remaining:</span>
           {Array.from({ length: 4 }).map((_, i) => (
-            <span key={i} className={`w-3 h-3 rounded-full ${i < mistakes ? 'bg-gray-700' : 'bg-gray-200'}`} />
+            <span key={i} className={`w-3 h-3 rounded-full transition-colors ${i < mistakes ? 'bg-gray-700' : 'bg-gray-200'}`} />
           ))}
         </div>
 
@@ -173,16 +173,16 @@ export default function ConnectionsGame() {
           <div className="flex justify-center gap-3">
             <button
               onClick={() => setSelected([])}
-              className="font-ui px-4 py-2 rounded-full border border-gray-400 text-sm font-semibold hover:bg-gray-100"
+              className="font-ui px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
               Deselect All
             </button>
             <button
               onClick={submit}
               disabled={selected.length !== 4}
-              className={`font-ui px-6 py-2 rounded-full text-sm font-semibold transition-colors
+              className={`font-ui px-6 py-2 rounded-full text-sm font-semibold transition-all
                 ${selected.length === 4
-                  ? 'bg-black text-white hover:bg-gray-800'
+                  ? 'bg-black text-white hover:bg-gray-800 btn-primary'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 }`}
             >
@@ -192,7 +192,7 @@ export default function ConnectionsGame() {
         )}
 
         {/* Color key */}
-        <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs text-gray-500">
+        <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs text-gray-400">
           {[['yellow','Easiest'],['green','Easy'],['blue','Hard'],['purple','Hardest']].map(([name, label]) => (
             <span key={name} className="flex items-center gap-1">
               <span className={`w-3 h-3 rounded-sm ${COLOR_CLASSES[name].bg}`}></span>
