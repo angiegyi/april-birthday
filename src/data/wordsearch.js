@@ -60,6 +60,12 @@ const wordsearch = [
 			["Y", "Y", "F", "K", "C", "O", "F", "F", "E", "E"],
 		],
 	},
+	{
+		creator: "Chris & Terry",
+		message:
+			"Happy 30th April! I can't believe we've known each other for over 5 years now. I'll never forget the first day I met you and it made that working from home experience 10 million times better during Covid. I'm so grateful to know someone as caring and thoughtful as you - but also to work with, travel with, party with, gossip with, and always have a great time hanging out <3. Every memory we've shared has been so much fun to experience. Have a wonderful day and can't wait to catch up next!! - Terry",
+		url: "https://wordsearchlabs.com/view/1512386",
+	},
 ];
 
 export default wordsearch;

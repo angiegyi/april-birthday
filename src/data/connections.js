@@ -214,6 +214,31 @@ const connections = [
 			},
 		],
 	},
+	{
+		creator: "James",
+		groups: [
+			{
+				label: "Things you should have at a music festival",
+				color: "blue",
+				words: ["vape", "cap", "flag", "tall person"],
+			},
+			{
+				label: "Relevant songs acronyms",
+				color: "green",
+				words: ["KOMD+C", "TLIKTB", "P", "FTS"],
+			},
+			{
+				label: "Your fave DJs without first and last letter",
+				color: "yellow",
+				words: ["ane", "eout", "enbohme", "abi"],
+			},
+			{
+				label: "Our boy Jared Taylor",
+				color: "purple",
+				words: ["clippers", "London", "commerce", "monash"],
+			},
+		],
+	},
 ];
 
 export default connections;
