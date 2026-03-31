@@ -112,6 +112,7 @@ export default function CrypticClueGame() {
   }
 
   const isMultiPart = puzzle.isMultiPart && puzzle.parts
+  const isRiddle = puzzle.type === 'riddle'
 
   const handlePartSolved = (partIndex) => {
     const newSolved = new Set(solvedParts)
@@ -132,14 +133,17 @@ export default function CrypticClueGame() {
     <Layout>
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-3 mb-1">
-          <Link to="/cryptic-clue" className="text-[13px] text-gray-400 hover:text-black transition-colors">← All Cryptic Clues</Link>
+          <Link to="/cryptic-clue" className="text-[13px] text-gray-400 hover:text-black transition-colors">← All Clues & Riddles</Link>
         </div>
         <div className="text-center mb-8">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {puzzle.creator}</p>
-          <h2 className="playfair text-3xl font-bold text-black mb-2">{isMultiPart ? 'Multi-Part Cryptic Clue' : 'Cryptic Clue'}</h2>
+          <h2 className="playfair text-3xl font-bold text-black mb-2">
+            {isRiddle ? (isMultiPart ? 'Riddles' : 'Riddle') : (isMultiPart ? 'Multi-Part Cryptic Clue' : 'Cryptic Clue')}
+          </h2>
           <p className="text-[13px] text-gray-500 max-w-sm mx-auto leading-relaxed">
-            Cryptic clues have a definition hiding in plain sight, plus a wordplay twist.
-            The number in brackets is the answer length.
+            {isRiddle
+              ? 'Read each riddle carefully and figure out what it describes!'
+              : 'Cryptic clues have a definition hiding in plain sight, plus a wordplay twist. The number in brackets is the answer length.'}
           </p>
           {isMultiPart && (
             <p className="text-[11px] uppercase tracking-[0.25em] text-amber-600 mt-2 font-semibold">
@@ -148,15 +152,17 @@ export default function CrypticClueGame() {
           )}
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm text-amber-800">
-          <p className="font-semibold mb-1">💡 Cryptic tips:</p>
-          <ul className="list-disc list-inside space-y-1 text-xs leading-relaxed">
-            <li>The clue contains a literal definition (usually at the start or end)</li>
-            <li>The rest is wordplay: anagrams, hidden words, reversals, sounds-like…</li>
-            <li>Words like "mixed", "confused", "chaotic" often signal an anagram</li>
-            <li>The number in brackets tells you how many letters</li>
-          </ul>
-        </div>
+        {!isRiddle && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm text-amber-800">
+            <p className="font-semibold mb-1">💡 Cryptic tips:</p>
+            <ul className="list-disc list-inside space-y-1 text-xs leading-relaxed">
+              <li>The clue contains a literal definition (usually at the start or end)</li>
+              <li>The rest is wordplay: anagrams, hidden words, reversals, sounds-like…</li>
+              <li>Words like "mixed", "confused", "chaotic" often signal an anagram</li>
+              <li>The number in brackets tells you how many letters</li>
+            </ul>
+          </div>
+        )}
 
         {isMultiPart ? (
           <>

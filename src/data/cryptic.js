@@ -49,6 +49,31 @@ const cryptic = [
 		answer: "SOULMATES",
 		length: 9,
 	},
+	{
+		creator: "Melanie",
+		type: "riddle",
+		message:
+			"Hi April, wishing you a wonderful 30th birthday. Thank you for being the most down to Earth and open minded person ever. You are the kind of person who makes me check myself and realise maybe I'm the problem 😀 Thanks for always hyping up our achievements, it means a lot. I hope we can make you feel as special as you make us feel. Love you lots!",
+		isMultiPart: true,
+		parts: [
+			{
+				clue: "I sit in a sack, both soft and white, I'm the secret to baking, turning wrongs into right. Mixed with water, I help rise the dough, In tasty delights, my presence will show. What am I?",
+				answer: "FLOUR",
+				length: 5,
+			},
+			{
+				clue: "In a dance with the heat, I become quite smooth, a companion to bread, I help flavors groove. Though I start from the cow, I'm not just for breakfast, in recipes countless, my presence is blessed. What am I?",
+				answer: "BUTTER",
+				length: 6,
+			},
+			{
+				clue: "I have a long neck but no head, only a wide, flat face. I'm the one you call when things are heating up, helping you flip your perspective before things get burnt. What am I?",
+				answer: "SPATULA",
+				length: 7,
+			},
+		],
+		megaAnswer: "FLOUR, BUTTER & SPATULA",
+	},
 ];
 
 export default cryptic;

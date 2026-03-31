@@ -214,6 +214,33 @@ const connections = [
 		],
 	},
 	{
+		creator: "Kathy",
+		message:
+			"Happy 30th Birthday April! 💕 You've been an inspiration and rock to all those around you - from travelling the world, making a name for yourself in your industry, and your journey to healing as of late. You've had an incredible 30 years, and this is just the start. I hope Thailand treats you with all the peace and healing that you deserve. Can't wait to see and celebrate with you when you're back in melbs :) xx",
+		groups: [
+			{
+				label: "Words to Describe April",
+				color: "blue",
+				words: ["BRAVE", "GO-GETTER", "BRIGHT", "STEADY"],
+			},
+			{
+				label: "Animal Crossing Villagers",
+				color: "green",
+				words: ["LOLLY", "MAPLE", "LILY", "MARSHAL"],
+			},
+			{
+				label: "Nossal Teachers",
+				color: "yellow",
+				words: ["WITT", "PEGS", "PAGE", "JOSE"],
+			},
+			{
+				label: "National Icons of Places April Has Traveled",
+				color: "purple",
+				words: ["LARGE SIZED EVERYTHING", "MOUNTAINS", "PASTA", "G.O.T SET"],
+			},
+		],
+	},
+	{
 		creator: "James",
 		groups: [
 			{

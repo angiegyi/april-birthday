@@ -66,6 +66,12 @@ const wordsearch = [
 			"Happy 30th April! I can't believe we've known each other for over 5 years now. I'll never forget the first day I met you and it made that working from home experience 10 million times better during Covid. I'm so grateful to know someone as caring and thoughtful as you - but also to work with, travel with, party with, gossip with, and always have a great time hanging out <3. Every memory we've shared has been so much fun to experience. Have a wonderful day and can't wait to catch up next!! - Terry",
 		url: "https://wordsearchlabs.com/view/1512386",
 	},
+	{
+		creator: "Jenny",
+		message:
+			"Happy 30th Birthday April! ❤️ Thank you for being my rock. Watching you be so brave and unapologetically yourself gave me the courage to figure out who I am and what I want out of life. I admire how you live this huge, passionate life but still make time for the people who matter. Seeing your love for your parents, sister, and little Noley is so beautiful. You always showed up for me, from being the best bridesmaid at my tea ceremony and wedding, to taking me around as a tourist during your Sydney era. Hitting 30 is scary since time feels so precious but I love having you to share those existential DNMs with about \"what's next.\" It's so exciting that we finally have the freedom to manifest the lives we want together with the people we love most. I can't wait to keep living our best lives and bugging you forever—because no matter how crazy life gets, you're stuck with me for the long haul. Have the most amazing birthday and I'm excited for your renewals health. Love you heaps! ❤️",
+		url: "https://wordsearchlabs.com/view/1520830",
+	},
 ];
 
 export default wordsearch;

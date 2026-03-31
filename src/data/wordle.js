@@ -59,6 +59,32 @@ const wordle = [
 		answer: "BOHMER",
 		message: `Happy 30th babes! There's something special about us both stepping into this decade together. Every milestone just hits different when you get to share it with the right person. Can't wait for all the ones still ahead with you ❤️`,
 	},
+	{
+		creator: "Cindy",
+		answer: "PEANUT",
+		hint: "Nickname I used to call you during our Killester days 😆",
+		message: `HAPPY 30TH BIRTHDAY MY LITTLE APPLE TREE 🍎 Who would've thought we'd be here together in old (lmao) age, still hanging out so many years after we first met in Killester. And how naive we were back then, remember how we wanted our siblings to get married so we could be sisters? But then there'd be no Noley 🥺 I'm so blessed to have a friend as wonderful as you in my life. Even though we live in different cities, when we get together it's as if the time we have been apart just turns into a tiny blip. Thank you for making the time to catch up, whether it's you coming down to hang with the girls or coming with me to Midnight Mafia hehehe Although we can't see each other for a little while yet, I hope you have an amazing REGENERATIVE year so that we can meet again in peak health. 💕💕`,
+	},
+	{
+		creator: "Lisa",
+		answer: "SALONPAS",
+		message: `Happy birthday April!! Three decades around the sun and I'm so proud of everything you've achieved along the way. I hope you have the most amazing day and that Thailand is giving you all the healing, rest, and sunshine you deserve ❤️`,
+	},
+	{
+		creator: "Naomi",
+		answer: "HEALS",
+		message: `Dear Apes, thank you so much for your friendship and kindness over the last 16 years?! I can't believe we are all 30 now :') it's ok, hopefully we don't actually look 30.... hahahaha I am so grateful to have met you and travel with you (despite nearly dying)! Hopefully we can look back at it and continue to be thankful we're alive!! I'm praying that you will rest and heal during your time in Thailand. It may be a long and tiring journey ahead, but just know we are here to support you anytime! You are not alone 🧡 Wishing you a wonderful 30th! HAPPY BIRTHDAY 😆`,
+	},
+	{
+		creator: "Kim",
+		answer: "NOLEY",
+		message: `Happy 30th April!! I am always so so in awe of everything you've accomplished in your 30 years on earth - your drive, passion and ambition are such an inspiration to witness. Thank you for always being such a kind hearted and warm friend, always cheering us on and bringing us together, I am always so grateful to you. Hope you make this year as amazing as you are ❤️`,
+	},
+	{
+		creator: "Daphne",
+		answer: "HEDGEHOG",
+		message: `Dearest April, happy 30th birthday!!! Thank you for your friendship for all these years and for the kindness and generosity that you always extend to others. We're so proud of all that you've achieved, but more importantly, who you are as a person- may this next chapter in Thailand be the well deserved R&R that you need 💖 love you lots and can't wait to catch up with you again soon!! Miss you 🥰`,
+	},
 ];
 
 export default wordle;
