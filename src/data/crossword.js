@@ -43,6 +43,7 @@ const crossword = [
 		message:
 			"Happy Birthday April! Thank you for being such an amazing friend over the years! Love our rants about back pain and getting old. Can't wait to see you when you are back!",
 		url: "https://crosswordlabs.com/embed/happy-bd-april",
+		password: "AprilBD",
 	},
 	{
 		creator: "Joe",
@@ -55,6 +56,20 @@ const crossword = [
 		message:
 			"Happy 30th birthday april!! I can't believe the elders of the MAC committee (you and I) have finally hit 30. I'm so glad to have met you way back in campus centre and hearing you talk about this up and coming club called MAC. You've come a long way April and I can't wait to see all the achievements you're gonna make in your 30s. Hope to see you back in Melbourne soon for another mactivity!",
 		url: "https://crosswordlabs.com/view/mac-x-april",
+		password: "snoopy",
+	},
+	{
+		creator: "Mel",
+		message:
+			"Happy birthday April! Hope this year is full of happiness, health and healing ❤️ thank you for all the uni/ mac memories and taking me around Sydney when I came to visit. Hope Aryan spoils you in Thailand. Let's catch up once you're healed and back in Aus! Lots of love, Mel ❤️",
+		url: "https://crosswordlabs.com/view/for-april-3",
+		password: "April",
+	},
+	{
+		creator: "Sarah",
+		message:
+			"Happy Birthday April! Welcome to your 30s!! I hope there's a delay before you experience the random back/joint pains. You are a beautiful and genuine soul and I'm lucky to call someone like you a friend. Wishing you the best on your healing journey and I hope your 30s is everything you imagined and more! ❤️ Sarah",
+		url: "https://crosswordlabs.com/view/for-april-4",
 	},
 ];
 

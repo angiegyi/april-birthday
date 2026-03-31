@@ -99,7 +99,7 @@ const connections = [
 	{
 		creator: "Reya",
 		message:
-			"Happiest of birthdays slaypril!!!! Wish I was there in Thailand celebrating with you, but it's okay we can have a big party once you're back. Hope you get all the rest and recovery you need so you can also rampage Thailand 🙌",
+			"HAPPY BIRTHDAY MOTHER!!! Love you to the moon and back 👩‍❤️‍👩 👩‍❤️‍👩 👩‍❤️‍👩",
 		groups: [
 			{
 				label: "Girlypops",
@@ -125,8 +125,7 @@ const connections = [
 	},
 	{
 		creator: "Deepthi",
-		message:
-			"Happiest of birthdays slaypril!!!! Wish I was there in Thailand celebrating with you, but it's okay we can have a big party once you're back. Hope you get all the rest and recovery you need so you can also rampage Thailand 🙌",
+		message: "",
 		groups: [
 			{
 				label: "Swedish House Mafia + Friends",

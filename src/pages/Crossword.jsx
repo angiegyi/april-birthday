@@ -31,6 +31,11 @@ export default function Crossword() {
                   <p className="text-[13px] text-gray-400 group-hover:text-gray-300">
                     {puzzle.message}
                   </p>
+                  {puzzle.password && (
+                    <p className="text-[12px] text-amber-600 group-hover:text-amber-300 mt-1 font-medium">
+                      Password: {puzzle.password}
+                    </p>
+                  )}
                 </div>
               </div>
               <span className="text-xl play-arrow">↗</span>
