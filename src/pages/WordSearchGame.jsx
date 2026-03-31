@@ -50,6 +50,29 @@ export default function WordSearchGame() {
     )
   }
 
+  if (puzzle.url) {
+    return (
+      <Layout>
+        <div className="max-w-lg mx-auto text-center py-12">
+          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {puzzle.creator}</p>
+          <h2 className="playfair text-3xl font-bold text-black mb-4">Word Search</h2>
+          <p className="text-gray-500 mb-6 text-sm leading-relaxed">{puzzle.message}</p>
+          <a
+            href={puzzle.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors"
+          >
+            Open Word Search →
+          </a>
+          <div className="mt-4">
+            <Link to="/word-search" className="text-[13px] text-gray-400 hover:text-black transition-colors">← Back to all Word Searches</Link>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+
   const { words, grid, creator } = puzzle
   const WORD_LOCATIONS = Object.fromEntries(words.map(w => [w, findWord(grid, w)]))
 

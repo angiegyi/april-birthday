@@ -45,7 +45,7 @@ const PUZZLES = [
     icon: '🧩',
     color: 'bg-rose-50/80 border-rose-200/60',
     accent: 'bg-rose-600',
-    label: 'Clues & Riddles',
+    label: 'Clues',
   },
   {
     path: '/make-24',
