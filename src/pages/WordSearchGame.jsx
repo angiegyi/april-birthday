@@ -50,30 +50,14 @@ export default function WordSearchGame() {
     )
   }
 
-  if (puzzle.url) {
-    return (
-      <Layout>
-        <div className="max-w-lg mx-auto text-center py-12">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400 mb-1 font-semibold">Puzzle by {puzzle.creator}</p>
-          <h2 className="playfair text-3xl font-bold text-black mb-4">Word Search</h2>
-          <p className="text-gray-500 mb-6 text-sm leading-relaxed">{puzzle.message}</p>
-          <a
-            href={puzzle.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors"
-          >
-            Open Word Search →
-          </a>
-          <div className="mt-4">
-            <Link to="/word-search" className="text-[13px] text-gray-400 hover:text-black transition-colors">← Back to all Word Searches</Link>
-          </div>
-        </div>
-      </Layout>
-    )
-  }
-
   const { words, grid, creator } = puzzle
+  const cols = grid[0]?.length || 0
+  const isLarge = cols > 16
+  const cellClass = isLarge
+    ? 'w-5 h-5 text-[10px]'
+    : cols > 12
+      ? 'w-6 h-6 sm:w-7 sm:h-7 text-[11px] sm:text-xs'
+      : 'w-7 h-7 sm:w-8 sm:h-8 text-xs sm:text-sm'
   const WORD_LOCATIONS = Object.fromEntries(words.map(w => [w, findWord(grid, w)]))
 
   const getSelectionCells = useCallback(() => {
@@ -132,7 +116,7 @@ export default function WordSearchGame() {
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-8 items-start justify-center">
+        <div className={`flex flex-col ${isLarge ? '' : 'sm:flex-row'} gap-8 items-start justify-center`}>
           <div className="select-none cursor-crosshair flex-shrink-0" onMouseLeave={handleMouseUp} onMouseUp={handleMouseUp}>
             <div className="inline-flex flex-col gap-0.5 border border-gray-200 p-1.5 bg-white rounded-xl shadow-sm">
               {grid.map((row, r) => (
@@ -144,7 +128,7 @@ export default function WordSearchGame() {
                     return (
                       <div
                         key={c}
-                        className={`w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold rounded-sm transition-colors
+                        className={`${cellClass} flex items-center justify-center font-bold rounded-sm transition-colors
                           ${isSel ? 'bg-gray-400 text-white' : colorClass || 'hover:bg-gray-100 text-black'}`}
                         onMouseDown={() => handleMouseDown(r, c)}
                         onMouseEnter={() => handleMouseEnter(r, c)}
