@@ -11,7 +11,7 @@ const wordsearch = [
 			"APRIL",
 			"BIRTHDAY",
 			"CAKE",
-			"FRIENDS",
+			"FRIEND",
 			"JOY",
 			"LOVE",
 			"STARS",
