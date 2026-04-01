@@ -65,7 +65,7 @@ const wordsearch = [
 		message:
 			"Happy 30th April! I can't believe we've known each other for over 5 years now. I'll never forget the first day I met you and it made that working from home experience 10 million times better during Covid. I'm so grateful to know someone as caring and thoughtful as you - but also to work with, travel with, party with, gossip with, and always have a great time hanging out <3. Every memory we've shared has been so much fun to experience. Have a wonderful day and can't wait to catch up next!! - Terry",
 		words: [
-			{ word: "SAMXU", clue: "One of the three Atlassians you first met (not either of us!)" },
+			{ word: "SAM", clue: "One of the three Atlassians you first met (not either of us!)" },
 			{ word: "REDOAK", clue: "Where we used to go for drinks as grads" },
 			{ word: "GOROS", clue: "The first place Chris saw you and Ary together" },
 			{ word: "HIIBIZA", clue: "Where you drank the most expensive bottled water" },
