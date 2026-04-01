@@ -40,12 +40,12 @@ const PUZZLES = [
   },
   {
     path: '/cryptic-clue',
-    title: 'Cryptic Clue',
-    description: 'Decode a fiendishly tricky cryptic crossword clue.',
+    title: 'Clues & Riddles',
+    description: 'Decode a cryptic clue or solve a riddle.',
     icon: '🧩',
     color: 'bg-rose-50/80 border-rose-200/60',
     accent: 'bg-rose-600',
-    label: 'Cryptic',
+    label: 'Clues',
   },
   {
     path: '/make-24',

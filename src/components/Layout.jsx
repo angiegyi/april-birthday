@@ -41,7 +41,7 @@ export default function Layout({ children }) {
               { path: '/connections', label: 'Connections' },
               { path: '/crossword', label: 'Crossword' },
               { path: '/word-search', label: 'Word Search' },
-              { path: '/cryptic-clue', label: 'Cryptic Clue' },
+              { path: '/cryptic-clue', label: 'Clues & Riddles' },
               { path: '/make-24', label: 'Make 24' },
             ].map(({ path, label }) => {
               const isActive = path === '/' ? location.pathname === '/' : location.pathname.startsWith(path)
