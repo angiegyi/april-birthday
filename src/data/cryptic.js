@@ -23,7 +23,7 @@ const cryptic = [
 	},
 	{
 		creator: "Marcus",
-		message: "",
+		message: "Happy Birthday April! After the Slovakia incident I’ll have to concede you’ve taken my place as geography queen. It’s been a long time coming, but it looks like I’ll have to find a new trivia niche. Can’t wait for all the adventures and endless yaps around Thailand, Europe, and wherever we end up (With mandatory YouTube quiz videos ofc). Hope you have a great birthday!!!",
 		isMultiPart: true,
 		parts: [
 			{
